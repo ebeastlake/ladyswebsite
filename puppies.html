@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Puppies</title>
+	<meta charset="utf-8">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="index.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
+	<script>
+		$(document).ready(function(){
+			$("#bear").click(function(){
+				$("#announce").text("Meet Bear!");
+				$(".puppytales").text("I am the cutest puppy and famous on Instagram! I also look the most like my mom now that I'm more grown up. I like to dress up in bandanas and play with my stuffed hippo.");
+			});
+			$("#willy").click(function(){
+				$("#announce").text("Meet Willy!");
+				$(".puppytales").text("I am the smallest of the pack and was the last to be born. I am a happy guy and will try everything once but compared to the other puppies I am quieter and more laid back.");
+			});
+			$("#osa").click(function(){
+				$("#announce").text("Meet Osa!");
+				$(".puppytales").text("I am the only female puppy. I was the closest to my mom when we were rescued. I am sweet and playful, but no pushover to my brothers or playmates! Today I live in Brooklyn and love going to Prospect Park for off-leash time.");
+			});
+			$("#goose").click(function(){
+				$("#announce").text("Meet Goose!");
+				$(".puppytales").text("I am the biggest puppy and I look the most like my dad. I am curious and confident. I like to ride the Metro-North train to visit my human grandma and grandpa in Westchester.  There's more space for hiking and walking there!");
+			});
+			$("#winston").click(function(){
+				$("#announce").text("Meet Winston!");
+				$(".puppytales").text("The other puppy families connected with Lady on social media. Unfortunately, my human parents aren't on Facebook or Instagram so my dog family doesn't have any recent details on me.");
+			});
+			$(document).click(function(e){
+				if(!(e.target.id == "bear") && !(e.target.id == "willy") && !(e.target.id == "osa") && !(e.target.id == "goose") && !(e.target.id == "winston")) {
+					$("#announce").text("Hi, we are Lady's puppies!");
+					$(".puppytales").text("Click on our pictures to learn more about us and to see what we look like today.");
+				}
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<header class="container-fluid">
+		<div class="row">
+			<div class="col-sm-6">
+				<a class="large-link" href="index">Lady the Street Dog</a>
+			</div>
+			<div class="col-sm-6 text-right">
+				<a class="small-link" href="about.html">about</a>
+				<a class="small-link" href="today.html">today</a>
+				<a class="small-link" href="puppies.html">puppies</a>
+				<a class="button" href="http://strayfromtheheart.org/">donate</a>
+			</div>
+		</div>
+	</header>
+
+	<hr>
+
+	<div class="container-fluid" id="restofpage">
+		<div class="row">
+			<div class="col-sm-3">
+				<img src="bear.jpg" id="bear" onmouseover="this.src='beartoday.jpg'" onmouseout="this.src='bear.jpg'" />
+			</div>
+			<div class="col-sm-3">
+				<img src="willy.jpg" id="willy" onmouseover="this.src='willytoday.jpg'" onmouseout="this.src='willy.jpg'" />
+			</div>
+			<div class="col-sm-3">
+				<img src="osa.jpg" id="osa" onmouseover="this.src='osatoday.jpg'" onmouseout="this.src='osa.jpg'" />
+			</div>
+			<div class="col-sm-3">
+				<img src="goose.jpg" id="goose" onmouseover="this.src='goosetoday.jpg'" onmouseout="this.src='goose.jpg'" />
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-3">
+				<img src="winston.jpg" id="winston">
+			</div>
+			<div class="col-sm-9">
+				<h1 id="announce">Hi, we are Lady's puppies!</h1>
+				<p class="puppytales">Click on our pictures to learn more about us and to see what we look like today.</p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
